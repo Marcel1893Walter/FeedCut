@@ -245,7 +245,7 @@ input[readonly]{
 
     display:grid;
 
-    grid-template-columns:2fr .7fr 2fr;
+    grid-template-columns:2fr 1fr 2fr;
 
     gap:8px;
 
