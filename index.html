@@ -1,84 +1,231 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FeedCut</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FeedCut</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="app">
 
-    <header>
-        <h1>FeedCut</h1>
-    </header>
+<header>
 
-    <section class="card">
+<h1>Feed<span>Cut</span></h1>
 
-        <h2>Drehzahl</h2>
+</header>
 
-        <label for="d">Ø Fräser (mm)</label>
-        <input id="d" type="text" inputmode="decimal" autocomplete="off">
+<!-- =========================
+     Durchmesser
+========================= -->
 
-        <label for="vc">Vc (m/min)</label>
-        <input id="vc" type="text" inputmode="decimal" autocomplete="off">
+<section class="diameter">
 
-        <label for="n">n (1/min)</label>
-        <input id="n" type="text" inputmode="numeric" autocomplete="off">
+<label for="d">Ø</label>
 
-    </section>
+<input
+id="d"
+type="text"
+inputmode="decimal"
+autocomplete="off">
 
-    <section class="card">
+<span>mm</span>
 
-        <h2>Vorschub</h2>
+</section>
 
-        <div class="mode">
-            <label>
-                <input type="radio" name="feedMode" value="fz" checked>
-                fz konstant
-            </label>
+<!-- =========================
+     Modus
+========================= -->
 
-            <label>
-                <input type="radio" name="feedMode" value="vf">
-                Vf konstant
-            </label>
-        </div>
+<section class="feedmode">
 
-        <label for="z">Schneiden z</label>
-        <input id="z" type="text" inputmode="numeric" autocomplete="off">
+<label>
 
-        <label for="fz">fz (mm)</label>
-        <input id="fz" type="text" inputmode="decimal" autocomplete="off">
+<input
+type="radio"
+name="feedMode"
+value="fz"
+checked>
 
-        <label for="vf">Vf (mm/min)</label>
-        <input id="vf" type="text" inputmode="numeric" autocomplete="off">
+fz konstant
 
-    </section>
+</label>
 
-    <section class="card">
+<label>
 
-        <h2>Bearbeitungszeit</h2>
+<input
+type="radio"
+name="feedMode"
+value="vf">
 
-        <label for="weg">Weg (mm)</label>
-        <input id="weg" type="text" inputmode="decimal" autocomplete="off">
+Vf konstant
 
-        <label for="anzahl">Wiederholungen</label>
-        <input id="anzahl" type="text" inputmode="numeric" value="1">
+</label>
 
-        <label for="zeit">Bearbeitungszeit (s)</label>
-        <input id="zeit" type="text" readonly>
+</section>
 
-    </section>
+<!-- =========================
+     Hauptbereich
+========================= -->
 
-    <div class="buttons">
-        <button id="clearBtn">🗑 Löschen</button>
-    </div>
+<section class="main">
+
+<div class="card rpm">
+
+<div class="icon">
+
+↻
+
+</div>
+
+<label for="vc">
+
+Vc (m/min)
+
+</label>
+
+<input
+id="vc"
+type="text"
+inputmode="decimal">
+
+<label for="n">
+
+n (1/min)
+
+</label>
+
+<input
+id="n"
+type="text"
+inputmode="numeric">
+
+</div>
+
+<div class="card feed">
+
+<div class="icon">
+
+⇢≈
+
+</div>
+
+<label for="z">
+
+z
+
+</label>
+
+<input
+id="z"
+type="text"
+inputmode="numeric">
+
+<label for="fz">
+
+fz (mm)
+
+</label>
+
+<input
+id="fz"
+type="text"
+inputmode="decimal">
+
+<label for="vf">
+
+Vf (mm/min)
+
+</label>
+
+<input
+id="vf"
+type="text"
+inputmode="numeric">
+
+</div>
+
+</section>
+
+<!-- =========================
+     Bearbeitungszeit
+========================= -->
+
+<section class="time">
+
+<div class="timefield weg">
+
+<label for="weg">
+
+Weg
+
+</label>
+
+<input
+id="weg"
+type="text"
+inputmode="decimal">
+
+</div>
+
+<div class="timefield amount">
+
+<label for="anzahl">
+
+Wdh.
+
+</label>
+
+<input
+id="anzahl"
+type="text"
+inputmode="numeric"
+value="1">
+
+</div>
+
+<div class="timefield runtime">
+
+<label for="zeit">
+
+Zeit (s)
+
+</label>
+
+<input
+id="zeit"
+type="text"
+readonly>
+
+</div>
+
+</section>
+
+<!-- =========================
+     Button
+========================= -->
+
+<section class="buttons">
+
+<button id="clearBtn">
+
+🗑 Alles löschen
+
+</button>
+
+</section>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
