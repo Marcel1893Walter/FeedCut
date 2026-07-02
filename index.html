@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedCut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>FeedCut</h1>
+    </header>
+
+    <section class="card">
+
+        <h2>Drehzahl</h2>
+
+        <label for="d">Ø Fräser (mm)</label>
+        <input id="d" type="text" inputmode="decimal" autocomplete="off">
+
+        <label for="vc">Vc (m/min)</label>
+        <input id="vc" type="text" inputmode="decimal" autocomplete="off">
+
+        <label for="n">n (1/min)</label>
+        <input id="n" type="text" inputmode="numeric" autocomplete="off">
+
+    </section>
+
+    <section class="card">
+
+        <h2>Vorschub</h2>
+
+        <div class="mode">
+            <label>
+                <input type="radio" name="feedMode" value="fz" checked>
+                fz konstant
+            </label>
+
+            <label>
+                <input type="radio" name="feedMode" value="vf">
+                Vf konstant
+            </label>
+        </div>
+
+        <label for="z">Schneiden z</label>
+        <input id="z" type="text" inputmode="numeric" autocomplete="off">
+
+        <label for="fz">fz (mm)</label>
+        <input id="fz" type="text" inputmode="decimal" autocomplete="off">
+
+        <label for="vf">Vf (mm/min)</label>
+        <input id="vf" type="text" inputmode="numeric" autocomplete="off">
+
+    </section>
+
+    <section class="card">
+
+        <h2>Bearbeitungszeit</h2>
+
+        <label for="weg">Weg (mm)</label>
+        <input id="weg" type="text" inputmode="decimal" autocomplete="off">
+
+        <label for="anzahl">Wiederholungen</label>
+        <input id="anzahl" type="text" inputmode="numeric" value="1">
+
+        <label for="zeit">Bearbeitungszeit (s)</label>
+        <input id="zeit" type="text" readonly>
+
+    </section>
+
+    <div class="buttons">
+        <button id="clearBtn">🗑 Löschen</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
